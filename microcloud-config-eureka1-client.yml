@@ -1,10 +1,10 @@
 spring:
   profiles:
     active:
-      - dev
+    - dev
 ---
 server:
- port: 7001
+  port: 7001
 eureka:
   server:
     eviction-interval-timer-in-ms: 1000   #设置清理的间隔时间，而后这个时间使用的是毫秒单位（默认是60秒）
@@ -13,7 +13,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-        defaultZone: http://admin:admin@localhost:7001/eureka
+      defaultZone: http://admin:admin@localhost:7001/eureka
   instance: # eureak实例定义
     hostname: localhost # 定义 Eureka 实例所在的主机名称
 spring:
@@ -26,7 +26,7 @@ spring:
     name: microcloud-config-eureka1-client
 ---
 server:
- port: 7002
+  port: 7002
 eureka:
   server:
     eviction-interval-timer-in-ms: 1000   #设置清理的间隔时间，而后这个时间使用的是毫秒单位（默认是60秒）
@@ -35,7 +35,7 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-        defaultZone: http://admin:admin@localhost:7002/eureka
+      defaultZone: http://admin:admin@localhost:7002/eureka
   instance: # eureak实例定义
     hostname: localhost # 定义 Eureka 实例所在的主机名称
 spring:
