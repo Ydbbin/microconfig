@@ -15,6 +15,11 @@ eureka:
  client:
   service-url:
     defaultZone: http://admin:admin@localhost:7001/eureka
+  register-with-eureka: false
+info:
+  app.name: microcloud-config-client-dev
+  company.name: ydb
+
 ---
 server:
   port: 8102
@@ -23,8 +28,13 @@ spring:
   profiles: beta
   application:
       name: microconfig-test-client
+  
 
 eureka:
  client:
   service-url:
     defaultZone: http://admin:admin@localhost:7001/eureka
+    register-with-eureka: false
+info:
+  app.name: microcloud-config-client-dev
+  company.name: ydb
